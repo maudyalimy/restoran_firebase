@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="10dp">
+            <ImageView
+                android:src="@drawable/baseline_search_24"
+                android:layout_height="30dp"
+                android:layout_width="30dp"
+                android:layout_margin="8dp"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Cari Makanan"
+                android:textSize="25dp"
+                android:id="@+id/txt_search_makanan"
+                />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/makanan_list_view"
+            android:background="#F2F2F2"
+            android:paddingTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/makanan_list_layout" />
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Makanan"
+        android:id="@+id/btn_add_makanan"
+        android:backgroundTint="?attr/colorPrimary"
+        android:textColor="?colorOnPrimary"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:padding="5dp"
+        android:layout_margin="20dp"
+        app:icon="@drawable/baseline_add_24"
+        app:iconTint="?colorOnPrimary"
+
+        android:layout_marginBottom="70dp"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="bottom"
+        />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        app:menu="@menu/menu_bottom"
+        app:elevation="0dp"
+        />
+
+</RelativeLayout>
